@@ -14,11 +14,13 @@ public class Car : MonoBehaviour
 
     // 四大基本類型：整數、浮點數、字串、布林值
 
-    public float hp = 99999;
-
+    [Header("這是汽車的 CC 數"), Tooltip("這是汽車的 CC 數，.....")]
     public int cc = 2000;
+    [Header("這是汽車的重量")]
     public float weight = 1500.5f;         // 小數點後面必須加上 f 或 F
     public string brand = "BMW";           // 文字必須使用雙引號
+    [Header("是否有天窗")]
+    [Tooltip("勾選代表有天窗，取消代表沒有")]
     public bool haveWindow = true;         // 是 true、否 false
 
     // 其他類型：顏色、座標 2 ~ 4、遊戲物件、元件 (屬性面板上粗體字 Rigidbody2D、Collider2D...)
