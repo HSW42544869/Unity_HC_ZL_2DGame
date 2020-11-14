@@ -2,6 +2,7 @@
 
 public class Car : MonoBehaviour
 {
+    #region 練習欄位
     // 單行註解：紀錄、說明、開發者名稱..
 
     // 資料 = C# 欄位 (Field)
@@ -42,4 +43,12 @@ public class Car : MonoBehaviour
     public GameObject obj;                  // 可以存放白線條物件與預製物
     public Transform tra;
     public SpriteRenderer sr;
+    #endregion
+
+    // 事件：開始 - 播放遊戲時執行一次
+    private void Start()
+    {
+        // 輸出訊息(訊息) - 顯示在 Console 面板上
+        print("哈囉，沃德~");
+    }
 }

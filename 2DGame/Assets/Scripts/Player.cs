@@ -9,9 +9,6 @@ public class Player : MonoBehaviour
     public int jump = 100;
     [Header("是否在地板上"), Tooltip("用來儲存玩家是否站在地板上")]
     public bool isGrounded = false;
-
-    private int score;
-
     [Header("子彈"), Tooltip("存放要生成的子彈預製物")]
     public GameObject bullet;
     [Header("子彈生成點"), Tooltip("子彈要生成的起始位置")]
@@ -23,6 +20,7 @@ public class Player : MonoBehaviour
     [Header("生命數量"), Range(0, 10)]
     public int live = 3;
 
+    private int score;
     private AudioSource aud;
     private Rigidbody2D rig;
     private Animator ani;
