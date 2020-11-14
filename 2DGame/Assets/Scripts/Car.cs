@@ -57,6 +57,7 @@ public class Car : MonoBehaviour
         Shoot(1, 500);
         Shoot(2, 600);
         Shoot(3);
+        Shoot(999, 1000);
     }
 
     // 事件：更新 - 約一秒執行 60 次
@@ -82,6 +83,12 @@ public class Car : MonoBehaviour
         transform.Translate(speed, 0, 0);
     }
 
+    // 摘要不是必要但很重要！
+    /// <summary>
+    /// 發射弓箭的功能
+    /// </summary>
+    /// <param name="count">弓箭數量</param>
+    /// <param name="speed">弓箭發射速度，預設為 300</param>
     private void Shoot(int count, int speed = 300)
     {
         print("發射弓箭：" + count);
