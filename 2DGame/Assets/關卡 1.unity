@@ -15540,6 +15540,14 @@ MonoBehaviour:
   red: {r: 1, g: 0, b: 0, a: 1}
   yellow: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   myColor: {r: 0.3, g: 0, b: 0.9, a: 1}
+  pos0: {x: 0, y: 0}
+  pos1: {x: 1, y: 1}
+  pos2: {x: 7, y: 9}
+  posV3: {x: 1, y: 1, z: 1}
+  posV4: {x: 1, y: 1, z: 1, w: 1}
+  obj: {fileID: 680279712449764780, guid: 64ea3b9a5b2eccc42b741df9a9afe1e6, type: 3}
+  tra: {fileID: 1273835585}
+  sr: {fileID: 1273835584}
 --- !u!212 &1273835584
 SpriteRenderer:
   m_ObjectHideFlags: 0

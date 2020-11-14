@@ -21,7 +21,7 @@ public class Car : MonoBehaviour
     public string brand = "BMW";           // 文字必須使用雙引號
     public bool haveWindow = true;         // 是 true、否 false
 
-    // 其他類型：顏色、座標 2 ~ 4、元件 (屬性面板上粗體字 Rigidbody2D、Collider2D...)
+    // 其他類型：顏色、座標 2 ~ 4、遊戲物件、元件 (屬性面板上粗體字 Rigidbody2D、Collider2D...)
 
     public Color red = Color.red;
     public Color yellow = Color.yellow;
@@ -34,4 +34,9 @@ public class Car : MonoBehaviour
 
     public Vector3 posV3 = Vector3.one;
     public Vector4 posV4 = Vector4.one;
+
+    // 遊戲物件與元件 不需要 指定 值
+    public GameObject obj;                  // 可以存放白線條物件與預製物
+    public Transform tra;
+    public SpriteRenderer sr;
 }
