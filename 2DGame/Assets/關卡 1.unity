@@ -15532,9 +15532,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea96ad70a5e5ea42bcc430167311989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 99999
-  cc: 2000
-  weight: 1500.5
+  cc: 5000
+  weight: 2000
   brand: BMW
   haveWindow: 1
   red: {r: 1, g: 0, b: 0, a: 1}
