@@ -53,6 +53,10 @@ public class Car : MonoBehaviour
 
         // 呼叫方法
         Drive(1);
+
+        Shoot(1, 500);
+        Shoot(2, 600);
+        Shoot(3);
     }
 
     // 事件：更新 - 約一秒執行 60 次
@@ -68,12 +72,19 @@ public class Car : MonoBehaviour
     // 定義程式區塊的語法
     // 語法:
     // 修飾詞 傳回類型 名稱 (參數) { 程式區塊 }
-    // 參數語法：參數類型 參數名稱
+    // 參數語法：參數類型 參數名稱 (指定 值)
+    // ※ 有預設值的參數要放在最右邊
     // 無傳回 void
     // 方法需要被呼叫才會執行
     private void Drive(float speed)
     {
         print("開車中...");
         transform.Translate(speed, 0, 0);
+    }
+
+    private void Shoot(int count, int speed = 300)
+    {
+        print("發射弓箭：" + count);
+        print("弓箭速度：" + speed);
     }
 }
