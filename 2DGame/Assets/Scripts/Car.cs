@@ -14,8 +14,16 @@ public class Car : MonoBehaviour
 
     // 四大基本類型：整數、浮點數、字串、布林值
 
+    public float hp = 99999;
+
     public int cc = 2000;
     public float weight = 1500.5f;         // 小數點後面必須加上 f 或 F
     public string brand = "BMW";           // 文字必須使用雙引號
     public bool haveWindow = true;         // 是 true、否 false
+
+    // 其他類型：顏色、座標 2 ~ 4、元件 (屬性面板上粗體字 Rigidbody2D、Collider2D...)
+
+    public Color red = Color.red;
+    public Color yellow = Color.yellow;
+    public Color myColor = new Color(0.3f, 0, 0.9f);     // 新 的 顏色();
 }

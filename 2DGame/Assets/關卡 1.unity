@@ -15532,10 +15532,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea96ad70a5e5ea42bcc430167311989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 99999
   cc: 2000
   weight: 1500.5
   brand: BMW
   haveWindow: 1
+  red: {r: 1, g: 0, b: 0, a: 1}
+  yellow: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  myColor: {r: 0.3, g: 0, b: 0.9, a: 1}
 --- !u!212 &1273835584
 SpriteRenderer:
   m_ObjectHideFlags: 0
