@@ -50,6 +50,10 @@ public class Car : MonoBehaviour
     {
         // 輸出訊息(訊息) - 顯示在 Console 面板上
         print("哈囉，沃德~");
+
+        // 呼叫方法
+        Drive();
+        Drive();
     }
 
     // 事件：更新 - 約一秒執行 60 次
@@ -57,5 +61,16 @@ public class Car : MonoBehaviour
     private void Update()
     {
         print("我在更新事件裡面~");
+    }
+
+    // 方法：
+    // 定義程式區塊的語法
+    // 語法:
+    // 修飾詞 傳回類型 名稱 () { 程式區塊 }
+    // 無傳回 void
+    // 方法需要被呼叫才會執行
+    private void Drive()
+    {
+        print("開車中...");
     }
 }
