@@ -26,4 +26,12 @@ public class Car : MonoBehaviour
     public Color red = Color.red;
     public Color yellow = Color.yellow;
     public Color myColor = new Color(0.3f, 0, 0.9f);     // 新 的 顏色();
+
+    // 2維~4維 向量
+    public Vector2 pos0 = Vector2.zero;
+    public Vector2 pos1 = Vector2.one;
+    public Vector2 pos2 = new Vector2(7, 9);
+
+    public Vector3 posV3 = Vector3.one;
+    public Vector4 posV4 = Vector4.one;
 }
