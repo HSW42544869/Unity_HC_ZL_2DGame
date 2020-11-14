@@ -51,4 +51,11 @@ public class Car : MonoBehaviour
         // 輸出訊息(訊息) - 顯示在 Console 面板上
         print("哈囉，沃德~");
     }
+
+    // 事件：更新 - 約一秒執行 60 次
+    // 處理：持續內容或玩家輸入 - 鍵盤、滑鼠與搖桿
+    private void Update()
+    {
+        print("我在更新事件裡面~");
+    }
 }
