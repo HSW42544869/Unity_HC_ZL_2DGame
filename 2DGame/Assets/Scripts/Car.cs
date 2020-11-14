@@ -17,7 +17,7 @@ public class Car : MonoBehaviour
     [Header("這是汽車的 CC 數"), Tooltip("這是汽車的 CC 數，.....")]
     [Range(500, 5000)]
     public int cc = 2000;
-    [Header("這是汽車的重量"),Range(500, 2000)]
+    [Header("這是汽車的重量"), Range(500, 2000)]
     public float weight = 1500.5f;         // 小數點後面必須加上 f 或 F
     public string brand = "BMW";           // 文字必須使用雙引號
     [Header("是否有天窗")]
