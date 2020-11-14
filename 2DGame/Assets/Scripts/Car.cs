@@ -52,8 +52,7 @@ public class Car : MonoBehaviour
         print("哈囉，沃德~");
 
         // 呼叫方法
-        Drive();
-        Drive();
+        Drive(1);
     }
 
     // 事件：更新 - 約一秒執行 60 次
@@ -61,16 +60,20 @@ public class Car : MonoBehaviour
     private void Update()
     {
         print("我在更新事件裡面~");
+
+        Drive(0.01f);
     }
 
     // 方法：
     // 定義程式區塊的語法
     // 語法:
-    // 修飾詞 傳回類型 名稱 () { 程式區塊 }
+    // 修飾詞 傳回類型 名稱 (參數) { 程式區塊 }
+    // 參數語法：參數類型 參數名稱
     // 無傳回 void
     // 方法需要被呼叫才會執行
-    private void Drive()
+    private void Drive(float speed)
     {
         print("開車中...");
+        transform.Translate(speed, 0, 0);
     }
 }
