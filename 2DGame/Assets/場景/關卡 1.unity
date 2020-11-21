@@ -15669,6 +15669,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objA: {fileID: 1273835582}
   objB: {fileID: 980259529}
+  traA: {fileID: 1284170022}
+  traB: {fileID: 1273835585}
 --- !u!1 &1284170020
 GameObject:
   m_ObjectHideFlags: 0
@@ -15749,7 +15751,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284170020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34, y: -0.8, z: 0}
+  m_LocalPosition: {x: 28.91, y: -2.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 251715141}
@@ -15795,7 +15797,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &1284170025
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
