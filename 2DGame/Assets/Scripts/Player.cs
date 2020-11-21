@@ -25,6 +25,14 @@ public class Player : MonoBehaviour
     private Rigidbody2D rig;
     private Animator ani;
 
+    // 事件：喚醒 - 在 Start 之前執行一次
+    private void Awake()
+    {
+        // 剛體 = 取得元件<剛體元件>()；
+        // 抓到角色身上的剛體元件存放到 rig 欄位內
+        rig = GetComponent<Rigidbody2D>();
+    }
+
     /// <summary>
     /// 移動功能
     /// </summary>
