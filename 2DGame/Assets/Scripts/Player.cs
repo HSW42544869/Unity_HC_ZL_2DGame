@@ -33,12 +33,19 @@ public class Player : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        Move();
+    }
+
     /// <summary>
     /// 移動功能
     /// </summary>
     private void Move()
     {
-
+        // 水平浮點數 = 輸入 的 取得軸向("水平") - 左右AD
+        float h = Input.GetAxis("Horizontal");
+        print("水平數值：" + h);
     }
 
     /// <summary>
