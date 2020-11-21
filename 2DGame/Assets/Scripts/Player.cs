@@ -24,4 +24,37 @@ public class Player : MonoBehaviour
     private AudioSource aud;
     private Rigidbody2D rig;
     private Animator ani;
+
+    /// <summary>
+    /// 移動功能
+    /// </summary>
+    private void Move()
+    {
+
+    }
+
+    /// <summary>
+    /// 跳躍功能
+    /// </summary>
+    private void Jump()
+    {
+
+    }
+
+    /// <summary>
+    /// 開槍功能
+    /// </summary>
+    private void Fire()
+    {
+
+    }
+
+    /// <summary>
+    /// 死亡功能
+    /// </summary>
+    /// <param name="obj">碰到物件的名稱</param>
+    private void Dead(string obj)
+    {
+
+    }
 }
