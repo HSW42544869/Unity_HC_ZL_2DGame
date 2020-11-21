@@ -45,7 +45,8 @@ public class Player : MonoBehaviour
     {
         // 水平浮點數 = 輸入 的 取得軸向("水平") - 左右AD
         float h = Input.GetAxis("Horizontal");
-        print("水平數值：" + h);
+        // 剛體 的 加速度 = 新 二維向量(水平浮點數 * 速度，剛體的加速度的Y)
+        rig.velocity = new Vector2(h * speed, rig.velocity.y);
     }
 
     /// <summary>
