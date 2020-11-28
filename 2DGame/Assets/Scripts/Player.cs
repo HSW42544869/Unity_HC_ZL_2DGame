@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
         // 剛體 = 取得元件<剛體元件>()；
         // 抓到角色身上的剛體元件存放到 rig 欄位內
         rig = GetComponent<Rigidbody2D>();
+        ani = GetComponent<Animator>();
     }
 
     private void Update()
@@ -47,6 +48,9 @@ public class Player : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         // 剛體 的 加速度 = 新 二維向量(水平浮點數 * 速度，剛體的加速度的Y)
         rig.velocity = new Vector2(h * speed, rig.velocity.y);
+        // 動畫 的 設定布林值(參數名稱，水平 不等於 零時勾選)
+        // != 不等於，傳回布林值
+        ani.SetBool("跑步開關", h != 0);
     }
 
     /// <summary>
