@@ -8,4 +8,25 @@ public class CameraControl : MonoBehaviour
     public float speed = 1.5f;
     [Header("攝影機下方與上方的限制")]
     public Vector2 limit = new Vector2(0, 3.5f);
+
+    public float a = 0;
+    public float b = 100;
+
+    public Vector2 v2A = new Vector2(0, 0);
+    public Vector2 v2B = new Vector2(100, 100);
+
+    private void Start()
+    {
+        // 插值
+        // 取得兩點間的某個值
+        // 0 - 10 取得 50% 得到 5
+        print(Mathf.Lerp(0, 100, 0.7f));
+    }
+
+    private void Update()
+    {
+        a = Mathf.Lerp(a, b, 0.1f);
+
+        v2A = Vector2.Lerp(v2A, v2B, 0.1f);
+    }
 }
