@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Move();
+        Fire();
     }
 
     /// <summary>
@@ -79,7 +80,13 @@ public class Player : MonoBehaviour
     /// </summary>
     private void Fire()
     {
-
+        // 按下左鍵之後
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            // 生成 子彈在槍口
+            Instantiate(bullet);
+        }
+        // 讓子彈飛
     }
 
     /// <summary>
