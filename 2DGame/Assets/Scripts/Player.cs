@@ -87,7 +87,10 @@ public class Player : MonoBehaviour
             // 生成(物件，座標，角度)
             GameObject temp = Instantiate(bullet, point.position, point.rotation);
             // 讓子彈飛
-            temp.GetComponent<Rigidbody2D>().AddForce(new Vector2(speedBullet, 100));
+            // 上 綠 transform.up
+            // 右 紅 transform.right
+            // 前 藍 transform.forward
+            temp.GetComponent<Rigidbody2D>().AddForce(transform.right * speedBullet + transform.up * 100);
         }
     }
 
