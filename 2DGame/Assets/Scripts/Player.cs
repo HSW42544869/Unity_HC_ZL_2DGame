@@ -75,8 +75,10 @@ public class Player : MonoBehaviour
     /// </summary>
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        // 如果 角色在地面上 並且 按下空白鍵 才能跳躍
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
+            isGrounded = false;                     // 不在地面上了
             rig.AddForce(transform.up * jump);
         }
     }
