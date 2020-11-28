@@ -15711,7 +15711,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -15746,7 +15746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10.5
-  jump: 100
+  jump: 750
   isGrounded: 0
   bullet: {fileID: 680279712449764780, guid: 64ea3b9a5b2eccc42b741df9a9afe1e6, type: 3}
   point: {fileID: 251715141}

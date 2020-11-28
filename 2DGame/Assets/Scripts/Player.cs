@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
     {
         Move();
         Fire();
+        Jump();
     }
 
     /// <summary>
@@ -74,7 +75,10 @@ public class Player : MonoBehaviour
     /// </summary>
     private void Jump()
     {
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rig.AddForce(transform.up * jump);
+        }
     }
 
     /// <summary>
