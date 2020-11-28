@@ -51,6 +51,19 @@ public class Player : MonoBehaviour
         // 動畫 的 設定布林值(參數名稱，水平 不等於 零時勾選)
         // != 不等於，傳回布林值
         ani.SetBool("跑步開關", h != 0);
+
+        // KeyCode 列舉(下拉式選單) - 所有輸入的項目 滑鼠、鍵盤、搖桿
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            // transform 此物件的變形元件
+            // eulerAngles 歐拉角度 0 - 180 - 270 - 360...
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
     }
 
     /// <summary>
