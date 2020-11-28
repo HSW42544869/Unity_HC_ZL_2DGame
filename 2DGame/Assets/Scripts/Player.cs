@@ -84,7 +84,8 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             // 生成 子彈在槍口
-            Instantiate(bullet);
+            // 生成(物件，座標，角度)
+            Instantiate(bullet, point.position, point.rotation);
         }
         // 讓子彈飛
     }
