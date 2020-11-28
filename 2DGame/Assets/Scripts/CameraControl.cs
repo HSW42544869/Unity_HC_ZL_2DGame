@@ -37,14 +37,17 @@ public class CameraControl : MonoBehaviour
     /// </summary>
     private void Track()
     {
-        Vector3 posA = transform.position;              // 取得攝影機座標
-        Vector3 posB = target.position;                 // 取得目標座標
+        Vector3 posA = transform.position;                              // 取得攝影機座標
+        Vector3 posB = target.position;                                 // 取得目標座標
 
-        posB.z = -10;                                   // 固定 Z 軸
+        posB.z = -10;                                                   // 固定 Z 軸
+        posB.y = Mathf.Clamp(posB.y, limit.x, limit.y);                 // 將 Y 軸夾在限制範圍內
 
-        posA = Vector3.Lerp(posA, posB, 0.2f);          // 插值
+        // 一幀的時間 Time.deltaTime
 
-        transform.position = posA;                      // 攝影機 座標 = A 點
+        posA = Vector3.Lerp(posA, posB, speed * Time.deltaTime);        // 插值
+
+        transform.position = posA;                                      // 攝影機 座標 = A 點
     }
 
     private void LateUpdate()
