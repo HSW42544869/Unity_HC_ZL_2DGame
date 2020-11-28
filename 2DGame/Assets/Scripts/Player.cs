@@ -82,8 +82,17 @@ public class Player : MonoBehaviour
         // 如果 角色在地面上 並且 按下空白鍵 才能跳躍
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
-            isGrounded = false;                     // 不在地面上了
             rig.AddForce(transform.up * jump);
+        }
+        // 如果 物理 圓形範圍 碰到 圖層 8 的地板物件
+        else if (Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y) + offset, radius, 1 << 8))
+        {
+            isGrounded = true;
+        }
+        // 沒有碰到地板物件
+        else
+        {
+            isGrounded = false;                     // 不在地面上了
         }
     }
 
