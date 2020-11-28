@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
         // 抓到角色身上的剛體元件存放到 rig 欄位內
         rig = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
+        aud = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -83,6 +84,8 @@ public class Player : MonoBehaviour
         // 按下左鍵之後
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            // 音源 的 播放一次音效(音效，隨機大小聲)
+            aud.PlayOneShot(soundFire, Random.Range(0.8f, 1.5f));
             // 生成 子彈在槍口
             // 生成(物件，座標，角度)
             GameObject temp = Instantiate(bullet, point.position, point.rotation);
