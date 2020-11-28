@@ -9,6 +9,7 @@ public class CameraControl : MonoBehaviour
     [Header("攝影機下方與上方的限制")]
     public Vector2 limit = new Vector2(0, 3.5f);
 
+    /* 認識插值
     public float a = 0;
     public float b = 100;
 
@@ -28,5 +29,26 @@ public class CameraControl : MonoBehaviour
         a = Mathf.Lerp(a, b, 0.1f);
 
         v2A = Vector2.Lerp(v2A, v2B, 0.1f);
+    }
+    */
+
+    /// <summary>
+    /// 追蹤
+    /// </summary>
+    private void Track()
+    {
+        Vector3 posA = transform.position;              // 取得攝影機座標
+        Vector3 posB = target.position;                 // 取得目標座標
+
+        posB.z = -10;                                   // 固定 Z 軸
+
+        posA = Vector3.Lerp(posA, posB, 0.2f);          // 插值
+
+        transform.position = posA;                      // 攝影機 座標 = A 點
+    }
+
+    private void LateUpdate()
+    {
+        Track();
     }
 }
