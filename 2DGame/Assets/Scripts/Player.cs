@@ -85,9 +85,10 @@ public class Player : MonoBehaviour
         {
             // 生成 子彈在槍口
             // 生成(物件，座標，角度)
-            Instantiate(bullet, point.position, point.rotation);
+            GameObject temp = Instantiate(bullet, point.position, point.rotation);
+            // 讓子彈飛
+            temp.GetComponent<Rigidbody2D>().AddForce(new Vector2(speedBullet, 100));
         }
-        // 讓子彈飛
     }
 
     /// <summary>
