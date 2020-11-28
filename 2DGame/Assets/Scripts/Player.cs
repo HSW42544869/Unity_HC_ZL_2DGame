@@ -103,6 +103,20 @@ public class Player : MonoBehaviour
     /// <param name="obj">碰到物件的名稱</param>
     private void Dead(string obj)
     {
+        // 如果 物件名稱 等於 死亡區域
+        // 等於 ==
+        if (obj == "死亡區域")
+        {
+            //this.enabled = false;
+            enabled = false;                    // 此腳本 關閉
+            ani.SetBool("死亡開關", true);
+        }
+    }
 
+    // OCE 碰撞時執行一次的事件
+    // collision 碰到物件的資訊
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Dead(collision.gameObject.name);
     }
 }
