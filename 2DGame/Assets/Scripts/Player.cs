@@ -20,6 +20,10 @@ public class Player : MonoBehaviour
     public AudioClip soundFire;
     [Header("生命數量"), Range(0, 10)]
     public int live = 3;
+    [Header("檢查地面位移")]
+    public Vector2 offset;
+    [Header("檢查地面半徑")]
+    public float radius = 0.3f;
 
     private int score;
     private AudioSource aud;
@@ -136,5 +140,14 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Dead(collision.gameObject.name);
+    }
+
+    // 繪製圖示：僅顯示魚場景面板
+    private void OnDrawGizmos()
+    {
+        // 圖示 顏色
+        Gizmos.color = new Color(1, 0, 0, 0.5f);
+        // 圖示 繪製球體(中心點，半徑)
+        Gizmos.DrawSphere(new Vector2(transform.position.x, transform.position.y) + offset, radius);
     }
 }
