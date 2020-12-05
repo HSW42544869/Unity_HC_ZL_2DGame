@@ -34,7 +34,15 @@ public class Enemy : MonoBehaviour
     /// </summary>
     private void Move()
     {
-
+        // 面向玩家：如果玩家的 X 大於 敵人的 X 角度 0，否則 角度 180
+        if (player.position.x > transform.position.x)
+        {
+            transform.eulerAngles = Vector3.zero;
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
     }
 
     /// <summary>
@@ -68,6 +76,11 @@ public class Enemy : MonoBehaviour
     {
         // 玩家變形 = 遊戲物件.尋找("玩家物件名稱").變形
         player = GameObject.Find("玩家").transform;
+    }
+
+    private void Update()
+    {
+        Move();
     }
     #endregion
 }
