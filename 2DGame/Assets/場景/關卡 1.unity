@@ -18543,7 +18543,7 @@ MonoBehaviour:
   - {fileID: 805150971}
   - {fileID: 253291511}
   textScore: {fileID: 486558460}
-  live: 3
+  live: 1
 --- !u!1 &1773218874
 GameObject:
   m_ObjectHideFlags: 0

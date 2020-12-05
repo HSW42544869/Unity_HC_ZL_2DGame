@@ -29,9 +29,15 @@ public class GameManager : MonoBehaviour
         // 陣列欄位[編號] 的 方法()
         //lives[0].SetActive(false);
 
-        for (int i = 1; i < 100; i++)
+        //for (int i = 1; i < 100; i++)
+        //{
+        //    print("迴圈：" + i);
+        //}
+
+        for (int i = 0; i < lives.Length; i++)
         {
-            print("迴圈：" + i);
+            // 判斷式 只有一行敘述時 可以省略 大括號
+            if (i >= live) lives[i].SetActive(false);
         }
     }
 
