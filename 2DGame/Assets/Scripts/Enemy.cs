@@ -17,7 +17,13 @@ public class Enemy : MonoBehaviour
     public float rangeTrack = 10.5f;
     [Header("攻擊範圍"), Range(0, 1000)]
     public float rangeAttack = 8.5f;
+    [Header("攻擊間隔"), Range(0, 5)]
+    public float intervalAttack = 2.5f;
 
+    /// <summary>
+    /// 計時器：紀錄時間
+    /// </summary>
+    private float timer;
     private Transform player;
     private Rigidbody2D rig;
     private AudioSource aud;
@@ -63,9 +69,18 @@ public class Enemy : MonoBehaviour
     {
         rig.velocity = new Vector2(0, rig.velocity.y);                                                      // 加速度 = X 0，Y 原本的 Y
 
-        aud.PlayOneShot(soundFire, Random.Range(0.3f, 0.5f));                                               // 播放音效
-        GameObject temp = Instantiate(bullet, point.position, point.rotation);                              // 生成子彈
-        temp.GetComponent<Rigidbody2D>().AddForce(transform.right * speedBullet + transform.up * 100);      // 子彈賦予推力
+        // 如果 計時器 大於等於 間隔 就攻擊
+        if (timer >= intervalAttack)
+        {
+            timer = 0;
+            aud.PlayOneShot(soundFire, Random.Range(0.3f, 0.5f));                                               // 播放音效
+            GameObject temp = Instantiate(bullet, point.position, point.rotation);                              // 生成子彈
+            temp.GetComponent<Rigidbody2D>().AddForce(transform.right * speedBullet + transform.up * 100);      // 子彈賦予推力
+        }
+        else
+        {
+            timer += Time.deltaTime;            // 累加時間
+        }
     }
 
     /// <summary>
