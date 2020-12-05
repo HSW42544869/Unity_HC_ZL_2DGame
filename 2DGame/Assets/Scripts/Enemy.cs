@@ -92,6 +92,9 @@ public class Enemy : MonoBehaviour
     {
         enabled = false;
         ani.SetBool("死亡開關", true);
+        GetComponent<CapsuleCollider2D>().enabled = false;      // 關閉碰撞器
+        rig.Sleep();                                            // 剛體 睡著
+        Destroy(gameObject, 2.5f);                              // 刪除(遊戲物件，延遲秒數)
     }
     #endregion
 
