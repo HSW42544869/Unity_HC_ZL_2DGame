@@ -19,9 +19,10 @@ public class Enemy : MonoBehaviour
     public float rangeAttack = 8.5f;
 
     private Transform player;
+    private Rigidbody2D rig;
+    private AudioSource aud;
     #endregion
 
-    private Rigidbody2D rig;
 
     #region 方法
     /// <summary>
@@ -60,7 +61,11 @@ public class Enemy : MonoBehaviour
     /// </summary>
     private void Fire()
     {
-        rig.velocity = Vector3.zero;
+        rig.velocity = new Vector2(0, rig.velocity.y);                                                      // 加速度 = X 0，Y 原本的 Y
+
+        aud.PlayOneShot(soundFire, Random.Range(0.3f, 0.5f));                                               // 播放音效
+        GameObject temp = Instantiate(bullet, point.position, point.rotation);                              // 生成子彈
+        temp.GetComponent<Rigidbody2D>().AddForce(transform.right * speedBullet + transform.up * 100);      // 子彈賦予推力
     }
 
     /// <summary>
@@ -85,6 +90,7 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         rig = GetComponent<Rigidbody2D>();
+        aud = GetComponent<AudioSource>();
 
         // 玩家變形 = 遊戲物件.尋找("玩家物件名稱").變形
         player = GameObject.Find("玩家").transform;
