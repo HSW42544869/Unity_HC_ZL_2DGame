@@ -155,12 +155,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff568b0be716f5479a95ac02868e396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 5.5
   bullet: {fileID: 680279712449764780, guid: af3a57abe1811d7429bcb4196095a83b, type: 3}
   point: {fileID: 1938444492}
   speedBullet: 1000
   soundFire: {fileID: 8300000, guid: 4def70ac75a51cb46a50950a11408891, type: 3}
-  rangeTrack: 12
+  rangeTrack: 13
   rangeAttack: 9
   intervalAttack: 2
 --- !u!82 &18599498
@@ -17999,12 +17999,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff568b0be716f5479a95ac02868e396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 5.5
   bullet: {fileID: 680279712449764780, guid: af3a57abe1811d7429bcb4196095a83b, type: 3}
   point: {fileID: 325465612}
   speedBullet: 1000
   soundFire: {fileID: 8300000, guid: 4def70ac75a51cb46a50950a11408891, type: 3}
-  rangeTrack: 12
+  rangeTrack: 13
   rangeAttack: 9
   intervalAttack: 2
 --- !u!70 &1442441013
@@ -18127,7 +18127,7 @@ Transform:
   m_Children:
   - {fileID: 325465612}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1643305947
 GameObject:
@@ -18158,7 +18158,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1643305949
 MonoBehaviour:
