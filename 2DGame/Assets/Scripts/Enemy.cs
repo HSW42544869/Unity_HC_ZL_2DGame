@@ -27,6 +27,29 @@ public class Enemy : MonoBehaviour
     #endregion
 
     #region 方法
+    /// <summary>
+    /// 移動
+    /// </summary>
+    private void Move()
+    {
+
+    }
+
+    /// <summary>
+    /// 開槍
+    /// </summary>
+    private void Fire()
+    {
+
+    }
+
+    /// <summary>
+    /// 死亡
+    /// </summary>
+    private void Dead()
+    {
+
+    }
     #endregion
 
     #region 事件
