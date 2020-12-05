@@ -123,9 +123,10 @@ public class Player : MonoBehaviour
     /// <param name="obj">碰到物件的名稱</param>
     private void Dead(string obj)
     {
-        // 如果 物件名稱 等於 死亡區域
+        // 或者 ||
+        // 如果 物件名稱 等於 死亡區域 或者 物件名稱 等於 敵人子彈
         // 等於 ==
-        if (obj == "死亡區域")
+        if (obj == "死亡區域" || obj == "敵人子彈")
         {
             //this.enabled = false;
             enabled = false;                    // 此腳本 關閉
@@ -148,7 +149,7 @@ public class Player : MonoBehaviour
     // collision 碰到物件的資訊
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Dead(collision.gameObject.name);
+        Dead(collision.gameObject.tag);
     }
 
     // 繪製圖示：僅顯示魚場景面板
