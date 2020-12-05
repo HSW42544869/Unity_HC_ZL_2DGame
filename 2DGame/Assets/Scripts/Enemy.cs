@@ -43,6 +43,11 @@ public class Enemy : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
+
+        // 距離 = 三維 的 距離(A點，B點)
+        float dis = Vector3.Distance(player.position, transform.position);
+
+        print("距離：" + dis);
     }
 
     /// <summary>
