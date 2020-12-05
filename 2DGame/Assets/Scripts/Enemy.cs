@@ -47,7 +47,16 @@ public class Enemy : MonoBehaviour
         // 距離 = 三維 的 距離(A點，B點)
         float dis = Vector3.Distance(player.position, transform.position);
 
-        print("距離：" + dis);
+        // 如果 距離 < 攻擊：攻擊
+        if (dis < rangeAttack)
+        {
+            print("進入攻擊範圍");
+        }
+        // 否則 距離 < 追蹤：追蹤
+        else if(dis < rangeTrack)
+        {
+            print("進入追蹤範圍");
+        }
     }
 
     /// <summary>
