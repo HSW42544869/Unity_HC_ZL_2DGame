@@ -83,12 +83,15 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private Animator ani;
+
     /// <summary>
     /// 死亡
     /// </summary>
     private void Dead()
     {
-
+        enabled = false;
+        ani.SetBool("死亡開關", true);
     }
     #endregion
 
@@ -106,6 +109,7 @@ public class Enemy : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
         aud = GetComponent<AudioSource>();
+        ani = GetComponent<Animator>();
 
         // 玩家變形 = 遊戲物件.尋找("玩家物件名稱").變形
         player = GameObject.Find("玩家").transform;
@@ -114,6 +118,14 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         Move();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "子彈")
+        {
+            Dead();
+        }
     }
     #endregion
 }
