@@ -8,13 +8,26 @@ public class GameManager : MonoBehaviour
 {
     // 陣列
     [Header("生命物件陣列")]
-    public GameObject[] live;
+    public GameObject[] lives;
     [Header("分數文字介面")]
     public Text textScore;
+
+    public int live = 3;
 
     private void Awake()
     {
         SetCollision();
+
+        SetLive();
+    }
+
+    /// <summary>
+    ///  更新生命介面
+    /// </summary>
+    private void SetLive()
+    {
+        // 陣列欄位[編號] 的 方法()
+        lives[0].SetActive(false);
     }
 
     /// <summary>

@@ -18538,11 +18538,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71a102db6936c1d4bad801929a3055ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  live:
+  lives:
   - {fileID: 1154650689}
   - {fileID: 805150971}
   - {fileID: 253291511}
   textScore: {fileID: 486558460}
+  live: 3
 --- !u!1 &1773218874
 GameObject:
   m_ObjectHideFlags: 0
