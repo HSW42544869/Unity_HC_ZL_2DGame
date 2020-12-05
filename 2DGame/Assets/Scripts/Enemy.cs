@@ -24,6 +24,8 @@ public class Enemy : MonoBehaviour
     // 攻擊範圍
     [Header("攻擊範圍"), Range(0, 1000)]
     public float rangeAttack = 8.5f;
+
+    private Transform player;
     #endregion
 
     #region 方法
@@ -60,6 +62,12 @@ public class Enemy : MonoBehaviour
 
         Gizmos.color = new Color(1, 0, 0, 0.3f);
         Gizmos.DrawSphere(transform.position, rangeAttack);
+    }
+
+    private void Awake()
+    {
+        // 玩家變形 = 遊戲物件.尋找("玩家物件名稱").變形
+        player = GameObject.Find("玩家").transform;
     }
     #endregion
 }
