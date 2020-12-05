@@ -27,7 +27,12 @@ public class GameManager : MonoBehaviour
     private void SetLive()
     {
         // 陣列欄位[編號] 的 方法()
-        lives[0].SetActive(false);
+        //lives[0].SetActive(false);
+
+        for (int i = 1; i < 100; i++)
+        {
+            print("迴圈：" + i);
+        }
     }
 
     /// <summary>
