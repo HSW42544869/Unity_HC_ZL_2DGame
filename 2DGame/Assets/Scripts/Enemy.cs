@@ -30,5 +30,13 @@ public class Enemy : MonoBehaviour
     #endregion
 
     #region 事件
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(0, 0, 1, 0.3f);
+        Gizmos.DrawSphere(transform.position, rangeTrack);
+
+        Gizmos.color = new Color(1, 0, 0, 0.3f);
+        Gizmos.DrawSphere(transform.position, rangeAttack);
+    }
     #endregion
 }

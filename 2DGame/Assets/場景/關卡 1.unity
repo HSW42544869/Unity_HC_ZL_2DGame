@@ -17623,6 +17623,7 @@ GameObject:
   - component: {fileID: 1442441014}
   - component: {fileID: 1442441013}
   - component: {fileID: 1442441011}
+  - component: {fileID: 1442441012}
   m_Layer: 0
   m_Name: "\u6575\u4EBA"
   m_TagString: Untagged
@@ -17726,6 +17727,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1442441012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442441010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff568b0be716f5479a95ac02868e396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10.5
+  bullet: {fileID: 0}
+  point: {fileID: 0}
+  speedBullet: 800
+  soundFire: {fileID: 0}
+  rangeTrack: 12
+  rangeAttack: 9
 --- !u!70 &1442441013
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -17841,7 +17861,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442441010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -1.45, z: 0}
+  m_LocalPosition: {x: 7.92, y: -1.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 325465612}
