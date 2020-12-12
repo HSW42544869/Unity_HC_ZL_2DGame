@@ -143,12 +143,12 @@ public class Player : MonoBehaviour
     /// 死亡功能
     /// </summary>
     /// <param name="obj">碰到物件的名稱</param>
-    private void Dead(string obj)
+    public void Dead(string obj)
     {
         // 或者 ||
         // 如果 物件名稱 等於 死亡區域 或者 物件名稱 等於 敵人子彈
         // 等於 ==
-        if (obj == "死亡區域" || obj == "敵人子彈")
+        if (obj == "死亡區域" || obj == "敵人子彈" || obj == "陷阱")
         {
             // 如果 死亡開關 為是 就 跳出
             if (ani.GetBool("死亡開關")) return;
