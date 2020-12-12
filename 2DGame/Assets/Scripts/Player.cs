@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D rig;
     private Animator ani;
 
+    private GameManager gm;
+
     // 事件：喚醒 - 在 Start 之前執行一次
     private void Awake()
     {
@@ -38,6 +40,10 @@ public class Player : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         aud = GetComponent<AudioSource>();
+
+        // 透過<類型>取得物件
+        // 僅限於此<類型>在場景上只有一個
+        gm = FindObjectOfType<GameManager>();
     }
 
     private void Update()
@@ -134,6 +140,9 @@ public class Player : MonoBehaviour
 
             // 延遲呼叫("方法名稱"，延遲時間)
             Invoke("Replay", 2.5f);
+
+            // 呼叫 GM 處理玩家死亡
+            gm.PlayerDead();
         }
     }
 

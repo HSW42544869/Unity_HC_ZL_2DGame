@@ -11,12 +11,23 @@ public class GameManager : MonoBehaviour
     public GameObject[] lives;
     [Header("分數文字介面")]
     public Text textScore;
-
-    public int live = 3;
+    // 一般欄位 重新載入場景 會還原為預設值
+    // 靜態欄位 重新載入場景 不會還原為預設值
+    public static int live = 3;
 
     private void Awake()
     {
         SetCollision();
+
+        SetLive();
+    }
+
+    /// <summary>
+    /// 玩家死亡
+    /// </summary>
+    public void PlayerDead()
+    {
+        live--;
 
         SetLive();
     }
