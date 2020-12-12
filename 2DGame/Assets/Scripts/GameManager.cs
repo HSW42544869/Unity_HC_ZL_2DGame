@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;   // 引用 介面 API
+using UnityEngine.UI;                       // 引用 介面 API
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// 遊戲管理器：管理生命、分數
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     // 一般欄位 重新載入場景 會還原為預設值
     // 靜態欄位 重新載入場景 不會還原為預設值
-    public static int live = 3;
+    public static int live = 1;
     public static int score;
 
     private void Awake()
@@ -25,6 +26,22 @@ public class GameManager : MonoBehaviour
 
         SetLive();
         AddScore(0);
+    }
+
+    private void Update()
+    {
+        BakeToMenu();
+        QuitGame();
+    }
+
+    private void BakeToMenu()
+    {
+        if(live == 0 && Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene("選單");
+    }
+
+    private void QuitGame()
+    {
+        if (live == 0 && Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
     }
 
     /// <summary>
