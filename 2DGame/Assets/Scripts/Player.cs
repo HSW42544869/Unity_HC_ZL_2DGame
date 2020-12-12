@@ -134,6 +134,8 @@ public class Player : MonoBehaviour
         // 等於 ==
         if (obj == "死亡區域" || obj == "敵人子彈")
         {
+            // 如果 死亡開關 為是 就 跳出
+            if (ani.GetBool("死亡開關")) return;
             //this.enabled = false;
             enabled = false;                    // 此腳本 關閉
             ani.SetBool("死亡開關", true);

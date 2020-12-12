@@ -15,11 +15,23 @@ public class GameManager : MonoBehaviour
     // 靜態欄位 重新載入場景 不會還原為預設值
     public static int live = 3;
 
+    public int score;
+
     private void Awake()
     {
         SetCollision();
 
         SetLive();
+    }
+
+    /// <summary>
+    /// 添加分數
+    /// </summary>
+    /// <param name="add">要添加多少分數</param>
+    public void AddScore(int add)
+    {
+        score += add;                           // 累加分數
+        textScore.text = "分數：" + score;       // 更新文字介面
     }
 
     /// <summary>
