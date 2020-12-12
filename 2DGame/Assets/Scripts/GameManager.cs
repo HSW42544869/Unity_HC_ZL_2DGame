@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     // 一般欄位 重新載入場景 會還原為預設值
     // 靜態欄位 重新載入場景 不會還原為預設值
-    public static int live = 1;
+    public static int live = 3;
     public static int score;
 
     private void Awake()
