@@ -51,6 +51,22 @@ public class Player : MonoBehaviour
         Move();
         Fire();
         Jump();
+        NextLevel();
+    }
+
+    /// <summary>
+    /// 前往下一關
+    /// </summary>
+    private void NextLevel()
+    {
+        if (inDoor && Input.GetKeyDown(KeyCode.W))                      // 如果 在門裡面 並且 按下 W
+        {
+            int lvIndex = SceneManager.GetActiveScene().buildIndex;     // 取得當前場景的編號
+
+            lvIndex++;                                                  // 編號加一
+
+            SceneManager.LoadScene(lvIndex);                            // 載入下一關
+        }
     }
 
     /// <summary>
