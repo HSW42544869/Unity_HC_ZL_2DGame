@@ -156,6 +156,23 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene("關卡 1");
     }
 
+    /// <summary>
+    /// 是否在傳送門裡面
+    /// </summary>
+    public bool inDoor;
+
+    // 觸發事件：
+    // 兩個碰撞物件有其中一個勾選 IsTrigger
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name == "傳送門") inDoor = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.name == "傳送門") inDoor = false;
+    }
+
     // OCE 碰撞時執行一次的事件
     // collision 碰到物件的資訊
     private void OnCollisionEnter2D(Collision2D collision)
