@@ -157,7 +157,9 @@ public class Player : MonoBehaviour
             ani.SetBool("死亡開關", true);
 
             // 延遲呼叫("方法名稱"，延遲時間)
-            Invoke("Replay", 2.5f);
+            // 靜態成員
+            // 類別名稱.靜態成員 存取
+            if (GameManager.live > 1) Invoke("Replay", 2.5f);
 
             // 呼叫 GM 處理玩家死亡
             gm.PlayerDead();
@@ -165,11 +167,12 @@ public class Player : MonoBehaviour
     }
 
     /// <summary>
-    /// 重新遊戲
+    /// 重新遊戲：重新載入當前的關卡
     /// </summary>
     private void Replay()
     {
-        SceneManager.LoadScene("關卡 1");
+        // 載入場景(當前場景 的 名稱)
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     /// <summary>

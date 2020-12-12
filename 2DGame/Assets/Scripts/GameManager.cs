@@ -11,10 +11,12 @@ public class GameManager : MonoBehaviour
     public GameObject[] lives;
     [Header("分數文字介面")]
     public Text textScore;
+    [Header("結束畫面")]
+    public GameObject final;
+
     // 一般欄位 重新載入場景 會還原為預設值
     // 靜態欄位 重新載入場景 不會還原為預設值
     public static int live = 3;
-
     public static int score;
 
     private void Awake()
@@ -43,6 +45,8 @@ public class GameManager : MonoBehaviour
         live--;
 
         SetLive();
+
+        if (live == 0) final.SetActive(true);
     }
 
     /// <summary>
